@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #fefaef;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  @apply text-6xl font-bold;
+}
+
+h2 {
+  @apply text-5xl font-bold;
+}
+
+h3 {
+  @apply text-3xl font-medium;
+}
+
+h4 {
+  @apply text-2xl font-medium;
+}
+
+h5 {
+  @apply text-xl font-medium;
+}
+
+h6 {
+  @apply text-lg font-medium;
+}
+
+p {
+  @apply text-sm
+  text-[#5C6574];
+}
