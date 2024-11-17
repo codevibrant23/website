@@ -31,6 +31,17 @@ const index = () => {
       <main className="my-2 w-full overflow-x-hidden">
         <Navbar />
         <Hero />
+        <section className="px-4 mt-10">
+          <div className="flex flex-col w-full text-center gap-3 md:gap-5">
+            <h2 className="font-bold text-2xl md:text-3xl lg:text-5xl">
+              A POS made for all your needs
+            </h2>
+            <p className="text-sm md:text-base lg:text-lg max-w-2xl mx-auto">
+              A quick and easy-to-use restaurant billing software that makes
+              managing high order volumes butter smooth
+            </p>
+          </div>
+        </section>
 
         {/* Header Section */}
 
@@ -178,13 +189,13 @@ const index = () => {
               restaurant formats and food outlets
             </p>
           </div>
-          <Types/>
+          <Types />
         </section>
         <section>
           <Testimonial />
         </section>
         <section>
-          <Contact/>
+          <Contact />
         </section>
         <Footer />
       </main>

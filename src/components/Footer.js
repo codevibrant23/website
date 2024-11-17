@@ -3,10 +3,17 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-white py-6 sm:py-8 lg:py-10 bg-[#ffe2ca]">
+    <footer className="bg-white py-6 sm:py-8 lg:py-10 bg-[#FFE2C9]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center">
-        <div className="flex flex-col items-start mb-4 sm:mb-0 lg:w-[600px] gap-5">
-          <img src="/media/logo.png" alt="Mantra" className="w-30 h-30" />
+        <div className="flex flex-col lg:items-start md:items-start sm:items-center mb-4 sm:mb-0 lg:w-[600px] gap-5">
+          {" "}
+          <span className="flex justify-center items-center">
+            <img
+              src="/media/logo.png"
+              alt="Mantra"
+              className="w-30 h-30 max-w-[150px]"
+            />
+          </span>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore .<u>Learn more</u>
@@ -197,8 +204,8 @@ const Footer = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center mt-8 sm:mt-10">
         <p className="text-gray-600 text-sm">
-          &copy; 2024 Restaurants. All Right Reserved. Developed by Vibrant
-          Digitech
+          &copy; 2024 Restaurants. All Right Reserved. Developed by{" "}
+          <b>Vibrant Digitech</b>
         </p>
         <div className="flex gap-4">
           <a
