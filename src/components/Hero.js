@@ -34,7 +34,7 @@ const Hero = () => {
 
           {/* Image Side */}
           <div className="w-full md:w-1/2">
-            <Image
+            <img
               src="/media/Hero1.svg"
               alt="Restaurant POS System"
               width={500}
