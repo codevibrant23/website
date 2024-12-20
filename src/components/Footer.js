@@ -63,39 +63,36 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-5 gap-4 w-full sm:w-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full sm:w-auto">
           <div className="flex flex-col items-center sm:items-start">
             <h5 className="font-bold mb-2">POS</h5>
             <a
               href="#"
               className="text-gray-600 hover:text-orange-600 transition-colors"
             >
-              lorem ipsum
+              Billing            </a>
+            <a
+              href="#"
+              className="text-gray-600 hover:text-orange-600 transition-colors"
+            >
+              CRM            </a>
+            <a
+              href="#"
+              className="text-gray-600 hover:text-orange-600 transition-colors"
+            >
+              Inventory
             </a>
             <a
               href="#"
               className="text-gray-600 hover:text-orange-600 transition-colors"
             >
-              lorem ipsum
+              Reporting
             </a>
             <a
               href="#"
               className="text-gray-600 hover:text-orange-600 transition-colors"
             >
-              lorem ipsum
-            </a>
-            <a
-              href="#"
-              className="text-gray-600 hover:text-orange-600 transition-colors"
-            >
-              lorem ipsum
-            </a>
-            <a
-              href="#"
-              className="text-gray-600 hover:text-orange-600 transition-colors"
-            >
-              lorem ipsum
-            </a>
+              Online ordering             </a>
           </div>
 
           <div className="flex flex-col items-center sm:items-start">
@@ -104,31 +101,32 @@ const Footer = () => {
               href="#"
               className="text-gray-600 hover:text-orange-600 transition-colors"
             >
-              lorem ipsum
+
+              Marketplace
             </a>
             <a
               href="#"
               className="text-gray-600 hover:text-orange-600 transition-colors"
             >
-              lorem ipsum
+              Payroll
             </a>
             <a
               href="#"
               className="text-gray-600 hover:text-orange-600 transition-colors"
             >
-              lorem ipsum
+              Invoice
             </a>
             <a
               href="#"
               className="text-gray-600 hover:text-orange-600 transition-colors"
             >
-              lorem ipsum
+              Tasks
             </a>
             <a
               href="#"
               className="text-gray-600 hover:text-orange-600 transition-colors"
             >
-              lorem ipsum
+              Marketing hub
             </a>
           </div>
 
@@ -138,35 +136,36 @@ const Footer = () => {
               href="#"
               className="text-gray-600 hover:text-orange-600 transition-colors"
             >
-              lorem ipsum
+
+              Fine dine
             </a>
             <a
               href="#"
               className="text-gray-600 hover:text-orange-600 transition-colors"
             >
-              lorem ipsum
+              QSR
             </a>
             <a
               href="#"
               className="text-gray-600 hover:text-orange-600 transition-colors"
             >
-              lorem ipsum
+              Cafe
             </a>
             <a
               href="#"
               className="text-gray-600 hover:text-orange-600 transition-colors"
             >
-              lorem ipsum
+              Food court
             </a>
             <a
               href="#"
               className="text-gray-600 hover:text-orange-600 transition-colors"
             >
-              lorem ipsum
-            </a>
+
+              Large chains              </a>
           </div>
 
-          <div className="flex flex-col items-center sm:items-start">
+          {/* <div className="flex flex-col items-center sm:items-start">
             <h5 className="font-bold mb-2">RESOURCES</h5>
             <a
               href="#"
@@ -198,7 +197,7 @@ const Footer = () => {
             >
               lorem ipsum
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
 

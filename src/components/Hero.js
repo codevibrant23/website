@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section className="relative w-full px-4 md:px-6 lg:px-8 pt-12 md:py-16 lg:py-20 bg-[url('/media/hero-bg.png')] bg-cover bg-center min-h-[80vh]">
       <div className="max-w-7xl mx-auto">
-      <div className="flex flex-col-reverse sm:flex-col md:flex-row items-center justify-between gap-8 md:gap-12">          {/* Content Side */}
+        <div className="flex flex-col-reverse sm:flex-col md:flex-row items-center justify-between gap-8 md:gap-12">          {/* Content Side */}
           <div className="flex flex-col gap-4 md:gap-6 lg:gap-8 w-full md:w-1/2 text-center md:text-left">
             <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
               Restaurant
@@ -14,7 +14,7 @@ const Hero = () => {
               <br />
               made simple!
             </h1>
-            
+
             <p className="text-sm md:text-base lg:text-lg max-w-xl">
               Manages all your restaurant operations efficiently so
               that you can focus on growing your brand, like a real
@@ -39,8 +39,7 @@ const Hero = () => {
               alt="Restaurant POS System"
               width={500}
               height={500}
-              className="w-full h-auto max-w-[500px] mx-auto
-                transform hover:scale-105 transition-transform duration-300"
+              className="w-full h-auto max-w-[500px] mx-auto transform hover:scale-105 transition-transform duration-300"
               priority
             />
           </div>

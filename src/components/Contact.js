@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React, { useState } from "react";
+import axios from "axios";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -9,6 +10,9 @@ const Contact = () => {
     city: "",
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [successMessage, setSuccessMessage] = useState("");
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
@@ -17,13 +21,25 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+    setIsSubmitting(true);
+    try {
+      const response = await axios.post("https://getform.io/f/bjjjxnmb", formData);
+      console.log("Form submitted successfully:", response.data);
+      setSuccessMessage("Your message has been sent successfully!");
+      setFormData({ name: "", phone: "", email: "", city: "" });
+    } catch (error) {
+      console.error("Error submitting the form:", error);
+      setSuccessMessage("Failed to send your message. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
+
   return (
     <>
-      <section className="flex flex-wrap justify-around w-full pb-20 ">
+      <section className="flex flex-wrap justify-around w-full pb-20">
         <div className="p-6 rounded-md border-orange-600 flex gap-5 justify-end flex-col">
           <h2>
             Schedule a <br className="hidden lg:block" />
@@ -40,7 +56,7 @@ const Contact = () => {
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                className=" bg-transparent w-full px-3 py-2 border border-orange-200 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
+                className="bg-transparent w-full px-3 py-2 border border-orange-200 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
               />
             </div>
 
@@ -84,25 +100,37 @@ const Contact = () => {
                 name="city"
                 value={formData.city}
                 onChange={handleChange}
-                className=" bg-transparent w-full px-3 py-2 border border-orange-200 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
+                className="bg-transparent w-full px-3 py-2 border border-orange-200 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
               />
             </div>
 
             <button
               type="submit"
-              className="bg-orange-500 text-white py-2 px-4 rounded-md hover:bg-orange-600 transition-colors font-medium uppercase"
+              disabled={isSubmitting}
+              className={`bg-orange-500 text-white py-2 px-4 rounded-md hover:bg-orange-600 transition-colors font-medium uppercase ${isSubmitting ? "opacity-50 cursor-not-allowed" : ""
+                }`}
             >
-              Submit
+              {isSubmitting ? "Submitting..." : "Submit"}
             </button>
           </form>
-        </div>{" "}
+          {successMessage && (
+            <p
+              className={`text-sm mt-2 ${successMessage.includes("successfully")
+                ? "text-green-500"
+                : "text-red-500"
+                }`}
+            >
+              {successMessage}
+            </p>
+          )}
+        </div>
         <div>
           <Image
             src="/media/demo.png"
             width={350}
             height={350}
             alt="bg"
-            className="sm:w-90% h-auto "
+            className="sm:w-90% h-auto"
           />
         </div>
       </section>

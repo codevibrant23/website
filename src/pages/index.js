@@ -176,7 +176,7 @@ const index = () => {
             src="/media/vector.svg"
             width={350}
             height={350}
-            alt="bg"
+            alt="b g"
             className="absolute top-[-10%] left-1/2 transform -translate-x-1/2 z-10"
           />
           <div className="flex flex-col gap-5">
@@ -191,9 +191,9 @@ const index = () => {
           </div>
           <Types />
         </section>
-        <section>
+        {/* <section>
           <Testimonial />
-        </section>
+        </section> */}
         <section>
           <Contact />
         </section>
