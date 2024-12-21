@@ -36,9 +36,9 @@ const Hero = () => {
           <div className="w-full md:w-1/2">
             <img
               src="/media/Hero1.svg"
-              alt="Restaurant POS System"
-              width={500}
-              height={500}
+              alt="Restaurant POS System,"
+              width={800}
+              height={800}
               className="w-full h-auto max-w-[500px] mx-auto transform hover:scale-105 transition-transform duration-300"
               priority
             />

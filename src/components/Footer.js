@@ -15,9 +15,7 @@ const Footer = () => {
             />
           </span>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore .<u>Learn more</u>
-          </p>
+            Effortless Billing for Every Business</p>
           <div className="flex flex-col items-center sm:items-start gap-5">
             <button className="px-6 py-2 bg-[#ff6600] text-xl text-white rounded-md font-bold hover:bg-[#ff6600]/90 transition-colors">
               Take a free demo{" "}
